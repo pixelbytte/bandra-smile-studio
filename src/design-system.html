@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Bandra Smile Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- For CDN preview without build step -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50:"#E8F7F6",100:"#C4ECEB",200:"#8ED9D6",300:"#58C6C1",
+              400:"#2EB3AC",500:"#0F9B8E",600:"#0C7C72",700:"#095E56",800:"#063F3A"
+            },
+            navy: {
+              50:"#E8EBF1",100:"#C4CCDA",200:"#8A9AB8",300:"#506896",
+              400:"#2D4878",500:"#1A2B4A",600:"#15223C",700:"#101A2E"
+            },
+            cream: {
+              100:"#FAF8F3",200:"#F5F0E8",300:"#EDE6D6",400:"#E0D5BF"
+            },
+            gold: {
+              100:"#FAF0D7",200:"#F2DC9F",300:"#E8C86A",400:"#D4A853",500:"#C49240"
+            }
+          },
+          fontFamily: {
+            serif: ["DM Serif Display","Georgia","serif"],
+            sans:  ["Inter","system-ui","sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background:#FAF8F3; font-family:"Inter",system-ui,sans-serif; color:#1A2B4A; }
+    h1,h2,h3,h4,h5 { font-family:"DM Serif Display",serif; }
+    .swatch { width:56px; height:56px; border-radius:12px; display:inline-block; }
+    .chip { display:inline-flex; align-items:center; gap:6px; padding:3px 10px 3px 6px;
+            border-radius:999px; font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+    section.ds-section { padding:3rem 0; border-top:1px solid #EDE6D6; }
+    .ds-label { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+                color:#8899B0; margin-bottom:.5rem; display:block; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <header style="background:linear-gradient(135deg,#1A2B4A,#101A2E)" class="text-white py-12 px-8">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:#58C6C1">Design System Reference</p>
+      <h1 class="text-5xl font-serif mb-2">Bandra Smile Studio</h1>
+      <p style="color:#8A9AB8" class="text-lg">Design tokens, components, and usage guidelines</p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-8 pb-24">
+
+    <!-- ── COLOR PALETTE ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Color Palette</h2>
+
+      <div class="mb-10">
+        <span class="ds-label">Primary — Soft Teal</span>
+        <div class="flex flex-wrap gap-3">
+          <div class="text-center"><div class="swatch" style="background:#E8F7F6;border:1px solid #C4ECEB"></div><div class="text-xs mt-1 text-gray-500">50</div></div>
+          <div class="text-center"><div class="swatch" style="background:#C4ECEB"></div><div class="text-xs mt-1 text-gray-500">100</div></div>
+          <div class="text-center"><div class="swatch" style="background:#8ED9D6"></div><div class="text-xs mt-1 text-gray-500">200</div></div>
+          <div class="text-center"><div class="swatch" style="background:#58C6C1"></div><div class="text-xs mt-1 text-gray-500">300</div></div>
+          <div class="text-center"><div class="swatch" style="background:#2EB3AC"></div><div class="text-xs mt-1 text-gray-500">400</div></div>
+          <div class="text-center relative">
+            <div class="swatch" style="background:#0F9B8E"></div>
+            <div class="text-xs mt-1 text-teal-600 font-bold">500 ★</div>
+          </div>
+          <div class="text-center"><div class="swatch" style="background:#0C7C72"></div><div class="text-xs mt-1 text-gray-500">600</div></div>
+          <div class="text-center"><div class="swatch" style="background:#095E56"></div><div class="text-xs mt-1 text-gray-500">700</div></div>
+          <div class="text-center"><div class="swatch" style="background:#063F3A"></div><div class="text-xs mt-1 text-gray-500">800</div></div>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <span class="ds-label">Secondary — Deep Navy</span>
+        <div class="flex flex-wrap gap-3">
+          <div class="text-center"><div class="swatch" style="background:#E8EBF1;border:1px solid #C4CCDA"></div><div class="text-xs mt-1 text-gray-500">50</div></div>
+          <div class="text-center"><div class="swatch" style="background:#C4CCDA"></div><div class="text-xs mt-1 text-gray-500">100</div></div>
+          <div class="text-center"><div class="swatch" style="background:#8A9AB8"></div><div class="text-xs mt-1 text-gray-500">200</div></div>
+          <div class="text-center"><div class="swatch" style="background:#506896"></div><div class="text-xs mt-1 text-gray-500">300</div></div>
+          <div class="text-center"><div class="swatch" style="background:#2D4878"></div><div class="text-xs mt-1 text-gray-500">400</div></div>
+          <div class="text-center">
+            <div class="swatch" style="background:#1A2B4A"></div>
+            <div class="text-xs mt-1 text-navy-500 font-bold">500 ★</div>
+          </div>
+          <div class="text-center"><div class="swatch" style="background:#15223C"></div><div class="text-xs mt-1 text-gray-500">600</div></div>
+          <div class="text-center"><div class="swatch" style="background:#101A2E"></div><div class="text-xs mt-1 text-gray-500">700</div></div>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <span class="ds-label">Neutrals & Accents</span>
+        <div class="flex flex-wrap gap-4 items-end">
+          <div class="text-center">
+            <div class="swatch" style="background:#FAF8F3;border:1px solid #EDE6D6"></div>
+            <div class="text-xs mt-1 text-gray-500">Cream BG</div>
+          </div>
+          <div class="text-center">
+            <div class="swatch" style="background:#F5F0E8;border:1px solid #EDE6D6"></div>
+            <div class="text-xs mt-1 text-gray-500">Cream 200</div>
+          </div>
+          <div class="text-center">
+            <div class="swatch" style="background:#FFFFFF;border:1px solid #EDE6D6"></div>
+            <div class="text-xs mt-1 text-gray-500">White</div>
+          </div>
+          <div class="text-center">
+            <div class="swatch" style="background:#D4A853"></div>
+            <div class="text-xs mt-1 text-gray-500">Gold ★</div>
+          </div>
+          <div class="text-center">
+            <div class="swatch" style="background:#C49240"></div>
+            <div class="text-xs mt-1 text-gray-500">Gold 500</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TYPOGRAPHY ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Typography</h2>
+
+      <div class="space-y-6">
+        <div>
+          <span class="ds-label">DM Serif Display — Headings</span>
+          <p class="font-serif text-navy-500" style="font-size:60px;line-height:1.1;letter-spacing:-0.02em">Beautiful Smiles Begin Here</p>
+          <p class="font-serif text-navy-500" style="font-size:48px;line-height:1.15;letter-spacing:-0.02em">Your Smile, Our Passion</p>
+          <p class="font-serif text-navy-500" style="font-size:36px;line-height:1.25;letter-spacing:-0.01em">Why Choose Bandra Smile Studio</p>
+          <p class="font-serif text-navy-500 italic" style="font-size:36px;line-height:1.25;letter-spacing:-0.01em;color:#0F9B8E">Crafting confident smiles</p>
+          <p class="font-serif text-navy-500" style="font-size:28px;line-height:1.3">Teeth Whitening Treatment</p>
+        </div>
+
+        <div>
+          <span class="ds-label">Inter — Body & UI</span>
+          <p style="font-size:18px;line-height:1.7;color:#4A5E7A;max-width:600px">
+            At Bandra Smile Studio, we believe great dental care should feel as good as it looks. Our team of experienced specialists combines the latest technology with a genuinely warm, patient-first approach.
+          </p>
+          <p style="font-size:16px;line-height:1.7;color:#4A5E7A;max-width:600px" class="mt-3">
+            We offer comprehensive dental services — from routine check-ups and cleanings to advanced cosmetic and restorative treatments — all in a calm, thoughtfully designed space.
+          </p>
+          <p style="font-size:14px;color:#8899B0;margin-top:12px">* Consultation required. Results may vary.</p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0F9B8E;margin-top:16px">Our Services</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BUTTONS ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Buttons</h2>
+
+      <div class="space-y-6">
+        <div>
+          <span class="ds-label">Primary (Teal)</span>
+          <div class="flex flex-wrap gap-4 items-center">
+            <button style="background:#0F9B8E;color:#fff;border:none;border-radius:9999px;padding:14px 28px;font-family:Inter,sans-serif;font-size:15px;font-weight:500;cursor:pointer;transition:all .25s">Book Appointment</button>
+            <button style="background:#0F9B8E;color:#fff;border:none;border-radius:9999px;padding:16px 36px;font-family:Inter,sans-serif;font-size:18px;font-weight:500;cursor:pointer">Book Free Consultation — Large</button>
+            <button style="background:#0F9B8E;color:#fff;border:none;border-radius:9999px;padding:8px 20px;font-family:Inter,sans-serif;font-size:13px;font-weight:500;cursor:pointer">Small</button>
+          </div>
+        </div>
+
+        <div>
+          <span class="ds-label">Secondary (Navy)</span>
+          <div class="flex flex-wrap gap-4 items-center">
+            <button style="background:#1A2B4A;color:#fff;border:none;border-radius:9999px;padding:14px 28px;font-family:Inter,sans-serif;font-size:15px;font-weight:500;cursor:pointer">Learn More</button>
+            <button style="background:#2D4878;color:#fff;border:none;border-radius:9999px;padding:14px 28px;font-family:Inter,sans-serif;font-size:15px;font-weight:500;cursor:pointer">Hover State</button>
+          </div>
+        </div>
+
+        <div>
+          <span class="ds-label">Outline & Ghost</span>
+          <div class="flex flex-wrap gap-4 items-center">
+            <button style="background:transparent;color:#0C7C72;border:2px solid #0F9B8E;border-radius:9999px;padding:12px 28px;font-family:Inter,sans-serif;font-size:15px;font-weight:500;cursor:pointer">View Services</button>
+            <button style="background:transparent;color:#1A2B4A;border:none;border-radius:9999px;padding:10px 16px;font-family:Inter,sans-serif;font-size:15px;font-weight:500;cursor:pointer">← Back</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CARDS ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Cards</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Service Card -->
+        <div style="background:#fff;border-radius:24px;padding:32px;box-shadow:0 4px 16px rgba(26,43,74,.08);border:1px solid #EDE6D6">
+          <div style="width:52px;height:52px;background:#E8F7F6;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F9B8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-serif text-navy-500 mb-2" style="font-size:22px">Teeth Whitening</h3>
+          <p style="color:#4A5E7A;font-size:15px;line-height:1.6;margin-bottom:20px">Professional-grade whitening for a noticeably brighter smile in just one session.</p>
+          <a href="#" style="color:#0F9B8E;font-size:14px;font-weight:600;text-decoration:none">Learn more →</a>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background:#fff;border-radius:24px;padding:32px;box-shadow:0 4px 16px rgba(26,43,74,.08);border:1px solid #EDE6D6">
+          <div style="display:flex;gap:4px;margin-bottom:16px">
+            <span style="color:#D4A853;font-size:18px">★★★★★</span>
+          </div>
+          <p style="color:#1A2B4A;font-size:16px;line-height:1.7;font-style:italic;margin-bottom:20px">"The best dental experience I've ever had. Clean, calm, and the results are incredible."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;background:#C4ECEB;border-radius:999px;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;color:#0F9B8E;font-size:16px">P</div>
+            <div>
+              <p style="font-weight:600;font-size:14px;color:#1A2B4A">Priya Sharma</p>
+              <p style="color:#8899B0;font-size:12px">Bandra West</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Card -->
+        <div style="background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 16px rgba(26,43,74,.08);border:1px solid #EDE6D6">
+          <div style="background:linear-gradient(135deg,#C4ECEB,#8ED9D6);height:180px;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'DM Serif Display',serif;font-size:48px;color:#0F9B8E">Dr.</span>
+          </div>
+          <div style="padding:24px">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0F9B8E">Orthodontist</span>
+            <h3 class="font-serif text-navy-500 mt-1" style="font-size:22px">Dr. Anjali Mehta</h3>
+            <p style="color:#4A5E7A;font-size:14px;margin-top:4px">MDS, 12 years experience</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── FORM ELEMENTS ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Form Elements</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
+        <div>
+          <label style="display:block;font-size:14px;font-weight:500;color:#1A2B4A;margin-bottom:6px">Full Name</label>
+          <input type="text" placeholder="Priya Sharma" style="width:100%;background:#fff;border:1.5px solid #EDE6D6;border-radius:12px;padding:12px 16px;font-family:Inter,sans-serif;font-size:16px;color:#1A2B4A;outline:none;box-sizing:border-box">
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:500;color:#1A2B4A;margin-bottom:6px">Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210" style="width:100%;background:#fff;border:1.5px solid #EDE6D6;border-radius:12px;padding:12px 16px;font-family:Inter,sans-serif;font-size:16px;color:#1A2B4A;outline:none;box-sizing:border-box">
+        </div>
+        <div class="md:col-span-2">
+          <label style="display:block;font-size:14px;font-weight:500;color:#1A2B4A;margin-bottom:6px">Message</label>
+          <textarea rows="3" placeholder="Tell us about your dental needs..." style="width:100%;background:#fff;border:1.5px solid #EDE6D6;border-radius:12px;padding:12px 16px;font-family:Inter,sans-serif;font-size:16px;color:#1A2B4A;outline:none;resize:none;box-sizing:border-box"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BADGES ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Badges & Tags</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="chip" style="background:#E8F7F6;color:#095E56">Most Popular</span>
+        <span class="chip" style="background:#FAF0D7;color:#A8791E">Award Winning</span>
+        <span class="chip" style="background:#E8EBF1;color:#15223C">New</span>
+        <span class="chip" style="background:#E8F7F6;color:#095E56">✓ Certified</span>
+        <span class="chip" style="background:#FAF0D7;color:#A8791E">★ Featured</span>
+      </div>
+    </section>
+
+    <!-- ── SECTION HEADER ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Section Header Pattern</h2>
+      <div style="text-align:center;max-width:600px;margin:0 auto">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0F9B8E;display:block;margin-bottom:12px">Our Services</span>
+        <h2 class="font-serif text-navy-500" style="font-size:40px;line-height:1.2;letter-spacing:-0.01em;margin-bottom:16px">Comprehensive Care for Every Smile</h2>
+        <p style="color:#4A5E7A;font-size:18px;line-height:1.7">From preventive care to smile transformations, our team of specialists delivers exceptional results in a comfortable environment.</p>
+      </div>
+    </section>
+
+    <!-- ── SHADOWS ── -->
+    <section class="ds-section">
+      <h2 class="text-3xl text-navy-500 mb-8">Shadows & Elevation</h2>
+      <div class="flex flex-wrap gap-8">
+        <div style="background:#fff;width:120px;height:80px;border-radius:16px;box-shadow:0 1px 3px rgba(26,43,74,.06),0 1px 2px rgba(26,43,74,.04);display:flex;align-items:center;justify-content:center;font-size:12px;color:#8899B0">card-sm</div>
+        <div style="background:#fff;width:120px;height:80px;border-radius:16px;box-shadow:0 4px 16px rgba(26,43,74,.08),0 2px 6px rgba(26,43,74,.04);display:flex;align-items:center;justify-content:center;font-size:12px;color:#8899B0">card</div>
+        <div style="background:#fff;width:120px;height:80px;border-radius:16px;box-shadow:0 8px 32px rgba(26,43,74,.10),0 4px 12px rgba(26,43,74,.05);display:flex;align-items:center;justify-content:center;font-size:12px;color:#8899B0">card-lg</div>
+        <div style="background:#fff;width:120px;height:80px;border-radius:16px;box-shadow:0 16px 48px rgba(26,43,74,.12),0 6px 16px rgba(26,43,74,.06);display:flex;align-items:center;justify-content:center;font-size:12px;color:#8899B0">card-xl</div>
+        <div style="background:#0F9B8E;width:120px;height:80px;border-radius:16px;box-shadow:0 4px 20px rgba(15,155,142,.25);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff">teal-glow</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="background:linear-gradient(135deg,#1A2B4A,#101A2E);color:#fff;text-align:center;padding:24px;font-size:13px;color:#506896">
+    Bandra Smile Studio — Design System v1.0 &nbsp;·&nbsp; Internal reference only
+  </footer>
+</body>
+</html>

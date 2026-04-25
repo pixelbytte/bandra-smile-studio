@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Book — Bandra Smile Studio</title>
+  <meta name="description" content="Book an appointment at Bandra Smile Studio. Call, WhatsApp or fill in our form. Located at 14/A Pali Hill, Bandra West, Mumbai. Open Mon–Sat 9am–8pm.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/output.css">
+</head>
+<body class="bg-cream-100 font-sans antialiased">
+
+  <!-- ══════════════════ NAV ══════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300">
+    <div class="container-site">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center shadow-teal-sm group-hover:bg-teal-600 transition-colors duration-200">
+            <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2c-1.7 0-3.1.9-4 2.2C5.1 2.9 3.7 2 2 2 2 2 1 6.6 3 9.2c.9 1.2 1.6 2.8 2 4.6L5.8 18H7l.3-2.8c.3-1.5 1.2-2.7 2.7-2.7s2.4 1.2 2.7 2.7L13 18h1.2l.8-4.2c.4-1.8 1.1-3.4 2-4.6C19 6.6 18 2 18 2c-1.7 0-3.1.9-4 2.2C13.1 2.9 11.7 2 10 2z"/></svg>
+          </div>
+          <div class="leading-tight">
+            <span class="block font-serif text-navy-500 text-[17px]">Bandra Smile</span>
+            <span class="block font-serif text-teal-500 text-[17px]">Studio</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="doctors.html" class="nav-link">Doctors</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link active text-teal-500">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="tel:+919876543210" class="flex items-center gap-2 text-body-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">
+            <svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            +91 98765 43210
+          </a>
+          <a href="#book" class="btn-primary btn-sm">Book Appointment</a>
+        </div>
+        <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-navy-500 hover:bg-cream-200 transition-colors" aria-label="Open menu">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden">
+      <div class="container-site pt-3 pb-4">
+        <div class="bg-white rounded-2xl shadow-card-xl border border-cream-200 overflow-hidden">
+          <div class="p-5 space-y-1">
+            <a href="index.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Home</a>
+            <a href="about.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">About</a>
+            <a href="services.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Services</a>
+            <a href="doctors.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Doctors</a>
+            <a href="gallery.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Gallery</a>
+            <a href="contact.html" class="flex py-3 px-4 rounded-xl text-body-md font-semibold text-teal-500 bg-teal-50">Contact</a>
+          </div>
+          <div class="px-5 pb-5 pt-1 border-t border-cream-200">
+            <a href="#book" class="btn-primary block text-center w-full">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════ PAGE HERO ══════════════════ -->
+  <section class="pt-32 pb-16 bg-gradient-to-b from-cream-100 to-white">
+    <div class="container-site">
+      <nav class="flex items-center gap-2 text-body-sm mb-6" style="color:#8899B0" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-teal-500 transition-colors">Home</a>
+        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <span class="text-navy-500 font-medium">Contact</span>
+      </nav>
+      <div class="max-w-content-md">
+        <span class="text-subheading mb-4 block">Get in Touch</span>
+        <h1 class="text-display mb-6 text-balance">We'd Love to<br><em class="text-teal-500">Hear from You</em></h1>
+        <p class="text-body-base text-xl max-w-content-sm leading-relaxed">Whether you have a question, want to book an appointment or need urgent advice — reach out. We respond to all enquiries within 2 business hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ QUICK CONTACT STRIP ══════════════════ -->
+  <section class="py-8 bg-teal-500">
+    <div class="container-site">
+      <div class="grid md:grid-cols-3 gap-6 text-white text-center">
+        <a href="tel:+919876543210" class="flex flex-col items-center gap-2 hover:text-teal-100 transition-colors group">
+          <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div class="font-semibold">Call Us</div>
+          <div class="text-teal-100 text-body-sm">+91 98765 43210</div>
+        </a>
+        <a href="https://wa.me/919876543210" class="flex flex-col items-center gap-2 hover:text-teal-100 transition-colors group">
+          <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="font-semibold">WhatsApp</div>
+          <div class="text-teal-100 text-body-sm">Chat with us now</div>
+        </a>
+        <a href="mailto:hello@bandrasmilestudio.com" class="flex flex-col items-center gap-2 hover:text-teal-100 transition-colors group">
+          <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="font-semibold">Email</div>
+          <div class="text-teal-100 text-body-sm">hello@bandrasmilestudio.com</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FORM + INFO ══════════════════ -->
+  <section id="book" class="section bg-white">
+    <div class="container-site">
+      <div class="grid lg:grid-cols-2 gap-14">
+
+        <!-- Form -->
+        <div class="animate-on-scroll">
+          <h2 class="text-heading-section mb-2">Book an Appointment</h2>
+          <p class="text-body-base mb-8">Fill in the form below and we'll confirm your appointment within 2 hours during working hours.</p>
+          <form id="contact-form" class="space-y-5" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="name">Full Name <span class="text-teal-500">*</span></label>
+                <input id="name" type="text" class="form-input" placeholder="Priya Sharma" required autocomplete="name">
+              </div>
+              <div>
+                <label class="form-label" for="phone">Phone Number <span class="text-teal-500">*</span></label>
+                <input id="phone" type="tel" class="form-input" placeholder="+91 98765 43210" required autocomplete="tel">
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="email">Email Address</label>
+              <input id="email" type="email" class="form-input" placeholder="priya@email.com" autocomplete="email">
+            </div>
+            <div>
+              <label class="form-label" for="service">Service Required</label>
+              <select id="service" class="form-select">
+                <option value="" disabled selected>Select a service…</option>
+                <option>General Check-up &amp; Cleaning</option>
+                <option>Teeth Whitening</option>
+                <option>Cosmetic Dentistry / Veneers</option>
+                <option>Invisalign / Orthodontics</option>
+                <option>Dental Implants</option>
+                <option>Root Canal Treatment</option>
+                <option>Smile Design Consultation</option>
+                <option>Paediatric Dentistry</option>
+                <option>Gum Treatment</option>
+                <option>Emergency / Toothache</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="doctor">Preferred Doctor</label>
+              <select id="doctor" class="form-select">
+                <option value="" disabled selected>No preference</option>
+                <option>Dr. Anjali Mehta — Smile Design &amp; General</option>
+                <option>Dr. Rohit Shah — Orthodontics &amp; Implants</option>
+                <option>Dr. Priya Nair — Paediatric &amp; Preventive</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="message">Additional Notes</label>
+              <textarea id="message" class="form-textarea" placeholder="Tell us about your concern, preferred appointment times or anything we should know…" rows="4"></textarea>
+            </div>
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="consent" class="mt-1 w-4 h-4 accent-teal-500 flex-shrink-0 cursor-pointer" required>
+              <label for="consent" class="text-body-sm cursor-pointer" style="color:#4A5E7A">I agree to be contacted by Bandra Smile Studio regarding my enquiry. I understand my data will be handled in accordance with the privacy policy.</label>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center text-base py-4">
+              Send Appointment Request
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Clinic Info -->
+        <div class="animate-on-scroll delay-200">
+          <h2 class="text-heading-section mb-8">Clinic Information</h2>
+
+          <!-- Address -->
+          <div class="card-soft p-6 mb-5">
+            <div class="flex items-start gap-4">
+              <div class="icon-wrap flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy-500 mb-1">Address</h3>
+                <p class="text-body-base">14/A Pali Hill, Bandra West,<br>Mumbai, Maharashtra 400050</p>
+                <a href="https://maps.google.com/?q=14+Pali+Hill+Bandra+West+Mumbai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-teal-500 font-medium text-body-sm mt-2 hover:text-teal-600 transition-colors">
+                  Open in Google Maps
+                  <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="card-soft p-6 mb-5">
+            <div class="flex items-start gap-4">
+              <div class="icon-wrap flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="w-full">
+                <h3 class="font-semibold text-navy-500 mb-3">Opening Hours</h3>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-body-sm">
+                    <span class="text-navy-500 font-medium">Monday – Friday</span>
+                    <span style="color:#4A5E7A">9:00 am – 8:00 pm</span>
+                  </div>
+                  <div class="flex justify-between text-body-sm">
+                    <span class="text-navy-500 font-medium">Saturday</span>
+                    <span style="color:#4A5E7A">9:00 am – 6:00 pm</span>
+                  </div>
+                  <div class="flex justify-between text-body-sm">
+                    <span class="text-navy-500 font-medium">Sunday</span>
+                    <span style="color:#4A5E7A">10:00 am – 4:00 pm</span>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-cream-200">
+                  <p class="text-body-sm text-teal-500 font-medium">Emergency appointments available. Call us anytime.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="card-soft p-6 mb-5">
+            <h3 class="font-semibold text-navy-500 mb-4">Direct Contact</h3>
+            <div class="space-y-3">
+              <a href="tel:+919876543210" class="flex items-center gap-3 text-body-base hover:text-teal-500 transition-colors group">
+                <div class="icon-wrap w-9 h-9 group-hover:bg-teal-500 group-hover:text-white transition-colors"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+                +91 98765 43210
+              </a>
+              <a href="https://wa.me/919876543210" class="flex items-center gap-3 text-body-base hover:text-teal-500 transition-colors group">
+                <div class="icon-wrap w-9 h-9 group-hover:bg-teal-500 group-hover:text-white transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+                WhatsApp Chat
+              </a>
+              <a href="mailto:hello@bandrasmilestudio.com" class="flex items-center gap-3 text-body-base hover:text-teal-500 transition-colors group">
+                <div class="icon-wrap w-9 h-9 group-hover:bg-teal-500 group-hover:text-white transition-colors"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                hello@bandrasmilestudio.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Parking note -->
+          <div class="flex items-center gap-3 text-body-sm bg-teal-50 rounded-xl px-4 py-3 border border-teal-100">
+            <svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20.25l-3.75-3.75M6.75 8.25l3.75 3.75L14.25 8.25M12 3v8.25m0 0H9.75m2.25 0H14.25"/></svg>
+            <span class="text-teal-700">Free parking available on premises. Nearest Metro: Bandra East (10 min walk).</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ MAP PLACEHOLDER ══════════════════ -->
+  <section class="bg-cream-100 py-12">
+    <div class="container-site">
+      <div class="rounded-3xl overflow-hidden shadow-card-lg border border-cream-200" style="height:380px; background:linear-gradient(135deg,#C4ECEB,#8ED9D6)">
+        <div class="w-full h-full flex flex-col items-center justify-center text-center gap-4">
+          <div class="w-16 h-16 rounded-full bg-teal-500 flex items-center justify-center shadow-teal-glow">
+            <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          </div>
+          <div>
+            <div class="font-serif text-navy-500 text-xl mb-1">14/A Pali Hill, Bandra West</div>
+            <div class="text-body-sm" style="color:#4A5E7A">Mumbai, Maharashtra 400050</div>
+          </div>
+          <a href="https://maps.google.com/?q=14+Pali+Hill+Bandra+West+Mumbai" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">Open in Google Maps</a>
+          <p class="text-body-sm" style="color:#4A5E7A">Embed your Google Maps iframe here in production</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FAQ ══════════════════ -->
+  <section class="section bg-white">
+    <div class="container-site">
+      <div class="section-header animate-on-scroll">
+        <span class="label">Common Questions</span>
+        <h2 class="title">Frequently Asked Questions</h2>
+        <p class="subtitle">Quick answers to the questions we hear most often. Can't find what you need? Just call us.</p>
+      </div>
+      <div class="max-w-content-lg mx-auto space-y-3">
+
+        <div class="border border-cream-200 rounded-2xl overflow-hidden animate-on-scroll">
+          <button class="faq-question w-full flex justify-between items-center px-6 py-5 text-left bg-white hover:bg-cream-50 transition-colors">
+            <span class="font-semibold text-navy-500 text-body-md">Is the first consultation really free?</span>
+            <svg class="faq-icon w-5 h-5 text-teal-500 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 bg-cream-50 border-t border-cream-200">
+            <p class="text-body-base pt-4">Yes — your first consultation (up to 20 minutes) is completely free. This includes a clinical overview, discussion of your goals and treatment options. If you need X-rays or a full examination, these are charged separately. There is no obligation to book any treatment.</p>
+          </div>
+        </div>
+
+        <div class="border border-cream-200 rounded-2xl overflow-hidden animate-on-scroll delay-100">
+          <button class="faq-question w-full flex justify-between items-center px-6 py-5 text-left bg-white hover:bg-cream-50 transition-colors">
+            <span class="font-semibold text-navy-500 text-body-md">Do you accept insurance?</span>
+            <svg class="faq-icon w-5 h-5 text-teal-500 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 bg-cream-50 border-t border-cream-200">
+            <p class="text-body-base pt-4">We accept most major corporate dental insurance plans. We'll process your claim directly with your insurer where possible. For plans we don't have a direct tie-up with, we provide detailed invoices and reports for you to claim reimbursement. Please call us with your insurer's name to confirm coverage before your visit.</p>
+          </div>
+        </div>
+
+        <div class="border border-cream-200 rounded-2xl overflow-hidden animate-on-scroll delay-200">
+          <button class="faq-question w-full flex justify-between items-center px-6 py-5 text-left bg-white hover:bg-cream-50 transition-colors">
+            <span class="font-semibold text-navy-500 text-body-md">How long does teeth whitening last?</span>
+            <svg class="faq-icon w-5 h-5 text-teal-500 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 bg-cream-50 border-t border-cream-200">
+            <p class="text-body-base pt-4">Professional in-office whitening results typically last 12–18 months with good oral hygiene and avoiding staining foods and drinks (coffee, tea, red wine). We also provide custom take-home whitening trays so you can maintain your results. Touch-up treatments are affordable and quick.</p>
+          </div>
+        </div>
+
+        <div class="border border-cream-200 rounded-2xl overflow-hidden animate-on-scroll">
+          <button class="faq-question w-full flex justify-between items-center px-6 py-5 text-left bg-white hover:bg-cream-50 transition-colors">
+            <span class="font-semibold text-navy-500 text-body-md">Is Invisalign right for me?</span>
+            <svg class="faq-icon w-5 h-5 text-teal-500 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 bg-cream-50 border-t border-cream-200">
+            <p class="text-body-base pt-4">Invisalign can treat a wide range of cases — from mild crowding to complex bite issues. The best way to find out is a quick consultation with Dr. Rohit Shah, our certified Invisalign provider. We use ClinCheck software to show you a 3D simulation of your projected results before you start. Many of our adult patients are surprised at how much Invisalign can achieve.</p>
+          </div>
+        </div>
+
+        <div class="border border-cream-200 rounded-2xl overflow-hidden animate-on-scroll delay-100">
+          <button class="faq-question w-full flex justify-between items-center px-6 py-5 text-left bg-white hover:bg-cream-50 transition-colors">
+            <span class="font-semibold text-navy-500 text-body-md">Do you offer EMI / payment plans?</span>
+            <svg class="faq-icon w-5 h-5 text-teal-500 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 bg-cream-50 border-t border-cream-200">
+            <p class="text-body-base pt-4">Yes. We offer 0% interest EMI options for treatments above ₹15,000 through Bajaj Finserv and select credit cards. We also accept all major UPI apps, credit/debit cards, and net banking. For larger treatment plans (implants, full smile makeovers), we work with you on a customised payment schedule. Ask our front desk team for details.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gradient-navy text-white">
+    <div class="container-site pt-16 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center"><svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2c-1.7 0-3.1.9-4 2.2C5.1 2.9 3.7 2 2 2 2 2 1 6.6 3 9.2c.9 1.2 1.6 2.8 2 4.6L5.8 18H7l.3-2.8c.3-1.5 1.2-2.7 2.7-2.7s2.4 1.2 2.7 2.7L13 18h1.2l.8-4.2c.4-1.8 1.1-3.4 2-4.6C19 6.6 18 2 18 2c-1.7 0-3.1.9-4 2.2C13.1 2.9 11.7 2 10 2z"/></svg></div>
+            <div class="leading-tight"><span class="block font-serif text-white text-[17px]">Bandra Smile</span><span class="block font-serif text-teal-400 text-[17px]">Studio</span></div>
+          </a>
+          <p class="text-body-sm leading-relaxed mb-6 max-w-sm" style="color:#8A9AB8">Premium dental care in the heart of Bandra West. Where exceptional dentistry meets a warm, welcoming environment.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-white/15 transition-colors" style="background:rgba(255,255,255,0.08)"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-white/15 transition-colors" style="background:rgba(255,255,255,0.08)"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://wa.me/919876543210" class="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-white/15 transition-colors" style="background:rgba(255,255,255,0.08)"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white text-body-md mb-5">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">General Dentistry</a></li>
+            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Cosmetic Dentistry</a></li>
+            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Orthodontics</a></li>
+            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Dental Implants</a></li>
+            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Smile Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white text-body-md mb-5">Visit Us</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="text-body-sm leading-relaxed" style="color:#8A9AB8">14/A Pali Hill, Bandra West,<br>Mumbai 400050</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+919876543210" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">+91 98765 43210</a></li>
+            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-body-sm leading-relaxed" style="color:#8A9AB8">Mon–Sat: 9am – 8pm<br>Sun: 10am – 4pm</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t pt-8" style="border-color:rgba(255,255,255,0.08)">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-body-sm" style="color:#506896">© 2026 Bandra Smile Studio. All rights reserved.</p>
+          <div class="flex items-center gap-6"><a href="#" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#506896">Privacy Policy</a><a href="#" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#506896">Terms</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment"
+     target="_blank" rel="noopener noreferrer"
+     style="position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.25);"
+     aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</body>
+</html>
