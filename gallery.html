@@ -10,6 +10,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          teal: {
+            DEFAULT: '#0F9B8E',
+            50: '#E6F7F6',
+            100: '#CCF0ED',
+            500: '#0F9B8E',
+            600: '#0D8A7E',
+            700: '#0B796E',
+          },
+          navy: {
+            DEFAULT: '#1A2B4A',
+            50: '#E8EBF0',
+            100: '#D1D7E1',
+            500: '#1A2B4A',
+            600: '#162640',
+            700: '#122036',
+          },
+          cream: {
+            DEFAULT: '#FAF8F3',
+            50: '#FFFFFF',
+            100: '#FAF8F3',
+            200: '#F5F1E8',
+          },
+          gold: {
+            DEFAULT: '#D4A853',
+            400: '#D4A853',
+          }
+        },
+        fontFamily: {
+          serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+  </script>
 </head>
 <body class="bg-cream-100 font-sans antialiased">
 
