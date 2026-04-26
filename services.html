@@ -15,32 +15,10 @@
     theme: {
       extend: {
         colors: {
-          teal: {
-            DEFAULT: '#0F9B8E',
-            50: '#E6F7F6',
-            100: '#CCF0ED',
-            500: '#0F9B8E',
-            600: '#0D8A7E',
-            700: '#0B796E',
-          },
-          navy: {
-            DEFAULT: '#1A2B4A',
-            50: '#E8EBF0',
-            100: '#D1D7E1',
-            500: '#1A2B4A',
-            600: '#162640',
-            700: '#122036',
-          },
-          cream: {
-            DEFAULT: '#FAF8F3',
-            50: '#FFFFFF',
-            100: '#FAF8F3',
-            200: '#F5F1E8',
-          },
-          gold: {
-            DEFAULT: '#D4A853',
-            400: '#D4A853',
-          }
+          teal: { DEFAULT: '#0F9B8E', 50: '#E6F7F6', 100: '#CCF0ED', 500: '#0F9B8E', 600: '#0D8A7E', 700: '#0B796E' },
+          navy: { DEFAULT: '#1A2B4A', 50: '#E8EBF0', 100: '#D1D7E1', 500: '#1A2B4A', 600: '#162640', 700: '#122036' },
+          cream: { DEFAULT: '#FAF8F3', 50: '#FFFFFF', 100: '#FAF8F3', 200: '#F5F1E8' },
+          gold: { DEFAULT: '#D4A853', 400: '#D4A853' }
         },
         fontFamily: {
           serif: ['"DM Serif Display"', 'Georgia', 'serif'],
@@ -50,15 +28,23 @@
     }
   }
   </script>
+  <style>
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .fade-in.delay-1 { transition-delay: 0.1s; }
+  .fade-in.delay-2 { transition-delay: 0.2s; }
+  .fade-in.delay-3 { transition-delay: 0.3s; }
+  </style>
 </head>
 <body class="bg-cream-100 font-sans antialiased">
 
-  <!-- ══════════════════ NAV ══════════════════ -->
+  <!-- NAV -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300">
-    <div class="container-site">
+    <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
-          <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center shadow-teal-sm group-hover:bg-teal-600 transition-colors duration-200">
+          <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center group-hover:bg-teal-600 transition-colors duration-200">
             <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2c-1.7 0-3.1.9-4 2.2C5.1 2.9 3.7 2 2 2 2 2 1 6.6 3 9.2c.9 1.2 1.6 2.8 2 4.6L5.8 18H7l.3-2.8c.3-1.5 1.2-2.7 2.7-2.7s2.4 1.2 2.7 2.7L13 18h1.2l.8-4.2c.4-1.8 1.1-3.4 2-4.6C19 6.6 18 2 18 2c-1.7 0-3.1.9-4 2.2C13.1 2.9 11.7 2 10 2z"/></svg>
           </div>
           <div class="leading-tight">
@@ -67,19 +53,19 @@
           </div>
         </a>
         <div class="hidden lg:flex items-center gap-7">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="services.html" class="nav-link active text-teal-500">Services</a>
-          <a href="doctors.html" class="nav-link">Doctors</a>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="index.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">About</a>
+          <a href="services.html" class="text-sm font-medium text-teal-500">Services</a>
+          <a href="doctors.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Doctors</a>
+          <a href="gallery.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Gallery</a>
+          <a href="contact.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Contact</a>
         </div>
         <div class="hidden lg:flex items-center gap-5">
-          <a href="tel:+919876543210" class="flex items-center gap-2 text-body-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">
+          <a href="tel:+919876543210" class="flex items-center gap-2 text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">
             <svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             +91 98765 43210
           </a>
-          <a href="contact.html" class="btn-primary btn-sm">Book Appointment</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-teal-600 transition-colors duration-200">Book Appointment</a>
         </div>
         <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-navy-500 hover:bg-cream-200 transition-colors" aria-label="Open menu">
           <svg id="menu-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -88,256 +74,256 @@
       </div>
     </div>
     <div id="mobile-menu" class="hidden lg:hidden">
-      <div class="container-site pt-3 pb-4">
-        <div class="bg-white rounded-2xl shadow-card-xl border border-cream-200 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 pt-3 pb-4">
+        <div class="bg-white rounded-2xl shadow-xl border border-cream-200 overflow-hidden">
           <div class="p-5 space-y-1">
-            <a href="index.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Home</a>
-            <a href="about.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">About</a>
-            <a href="services.html" class="flex py-3 px-4 rounded-xl text-body-md font-semibold text-teal-500 bg-teal-50">Services</a>
-            <a href="doctors.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Doctors</a>
-            <a href="gallery.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Gallery</a>
-            <a href="contact.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Contact</a>
+            <a href="index.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Home</a>
+            <a href="about.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">About</a>
+            <a href="services.html" class="flex py-3 px-4 rounded-xl text-sm font-semibold text-teal-500 bg-teal-50">Services</a>
+            <a href="doctors.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Doctors</a>
+            <a href="gallery.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Gallery</a>
+            <a href="contact.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Contact</a>
           </div>
           <div class="px-5 pb-5 pt-1 border-t border-cream-200">
-            <a href="contact.html" class="btn-primary block text-center w-full">Book Appointment</a>
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-6 py-3 hover:bg-teal-600 transition-colors duration-200 block text-center w-full">Book Appointment</a>
           </div>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- ══════════════════ PAGE HERO ══════════════════ -->
+  <!-- PAGE HERO -->
   <section class="pt-32 pb-16 bg-gradient-to-b from-cream-100 to-white">
-    <div class="container-site">
-      <nav class="flex items-center gap-2 text-body-sm mb-6" style="color:#8899B0" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color:#8899B0" aria-label="Breadcrumb">
         <a href="index.html" class="hover:text-teal-500 transition-colors">Home</a>
         <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <span class="text-navy-500 font-medium">Services</span>
       </nav>
-      <div class="max-w-content-md">
-        <span class="text-subheading mb-4 block">What We Offer</span>
-        <h1 class="text-display mb-6 text-balance">Every Treatment.<br><em class="text-teal-500">Every Smile.</em></h1>
-        <p class="text-body-base text-xl max-w-content-sm leading-relaxed">From a first visit to a full smile transformation, we offer everything your dental health needs — delivered with care, precision and the latest technology.</p>
+      <div class="max-w-2xl">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-teal-500 mb-4 block">What We Offer</span>
+        <h1 class="font-serif text-5xl md:text-6xl text-navy-500 mb-6 text-balance">Every Treatment.<br><em class="text-teal-500">Every Smile.</em></h1>
+        <p class="text-base text-gray-600 text-xl max-w-xl leading-relaxed">From a first visit to a full smile transformation, we offer everything your dental health needs — delivered with care, precision and the latest technology.</p>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ SERVICES GRID ══════════════════ -->
-  <section class="section bg-white">
-    <div class="container-site">
+  <!-- SERVICES GRID -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8">
 
         <!-- General Dentistry -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">General Dentistry</h3>
-              <span class="badge-teal text-xs">Foundation of Health</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">General Dentistry</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Foundation of Health</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Comprehensive oral health care — check-ups, digital X-rays, professional cleaning, fluoride treatments and composite fillings. We recommend a check-up every 6 months to catch problems before they become costly.</p>
+          <p class="text-base text-gray-600 mb-5">Comprehensive oral health care — check-ups, digital X-rays, professional cleaning, fluoride treatments and composite fillings. We recommend a check-up every 6 months to catch problems before they become costly.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Comprehensive examination &amp; digital X-rays</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Professional scaling &amp; polishing</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Tooth-coloured composite fillings</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Extractions &amp; emergency care</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Comprehensive examination &amp; digital X-rays</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Professional scaling &amp; polishing</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Tooth-coloured composite fillings</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Extractions &amp; emergency care</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
         <!-- Cosmetic Dentistry -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll delay-100">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in delay-1">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Cosmetic Dentistry</h3>
-              <span class="badge-gold text-xs">Most Popular</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Cosmetic Dentistry</h3>
+              <span class="inline-flex items-center text-xs font-semibold rounded-full px-3 py-1" style="color:#92660A; background:rgba(212,168,83,0.12); border:1px solid rgba(212,168,83,0.3)">Most Popular</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Transform your smile with expert cosmetic treatments. From simple whitening to full porcelain veneers, every procedure is planned digitally and personalised to your facial aesthetics.</p>
+          <p class="text-base text-gray-600 mb-5">Transform your smile with expert cosmetic treatments. From simple whitening to full porcelain veneers, every procedure is planned digitally and personalised to your facial aesthetics.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Professional in-office teeth whitening</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Porcelain veneers &amp; laminates</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Composite bonding &amp; reshaping</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Gum contouring &amp; pink aesthetics</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Professional in-office teeth whitening</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Porcelain veneers &amp; laminates</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Composite bonding &amp; reshaping</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Gum contouring &amp; pink aesthetics</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
         <!-- Orthodontics -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Orthodontics</h3>
-              <span class="badge-teal text-xs">For All Ages</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Orthodontics</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">For All Ages</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Straighten your teeth discreetly with Invisalign clear aligners or traditional braces. Dr. Rohit Shah is a certified Invisalign provider with hundreds of successful cases in Mumbai.</p>
+          <p class="text-base text-gray-600 mb-5">Straighten your teeth discreetly with Invisalign clear aligners or traditional braces. Dr. Rohit Shah is a certified Invisalign provider with hundreds of successful cases in Mumbai.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Invisalign &amp; clear aligner therapy</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Metal &amp; ceramic braces</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Retainers &amp; post-treatment care</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Virtual progress monitoring</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Invisalign &amp; clear aligner therapy</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Metal &amp; ceramic braces</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Retainers &amp; post-treatment care</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Virtual progress monitoring</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
         <!-- Dental Implants -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll delay-100">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in delay-1">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Dental Implants</h3>
-              <span class="badge-navy text-xs">Permanent Solution</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Dental Implants</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-navy-500 bg-navy-50 border border-navy-100 rounded-full px-3 py-1">Permanent Solution</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Replace missing teeth with titanium implants that look, feel and function exactly like your natural teeth. We use Nobel Biocare implants and offer same-day temporary crowns.</p>
+          <p class="text-base text-gray-600 mb-5">Replace missing teeth with titanium implants that look, feel and function exactly like your natural teeth. We use Nobel Biocare implants and offer same-day temporary crowns.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Single tooth &amp; full-arch implants</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> All-on-4 &amp; All-on-6 solutions</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> CBCT-guided surgical planning</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Bone grafting when needed</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Single tooth &amp; full-arch implants</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> All-on-4 &amp; All-on-6 solutions</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> CBCT-guided surgical planning</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Bone grafting when needed</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
         <!-- Root Canal -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Root Canal Treatment</h3>
-              <span class="badge-teal text-xs">Pain-Free</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Root Canal Treatment</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Pain-Free</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Modern rotary endodontics makes root canal treatment comfortable and efficient. We save teeth that other clinics might extract — usually in a single appointment.</p>
+          <p class="text-base text-gray-600 mb-5">Modern rotary endodontics makes root canal treatment comfortable and efficient. We save teeth that other clinics might extract — usually in a single appointment.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Single-visit RCT in most cases</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Rotary NiTi file systems</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Digital apex locators</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Post &amp; core + crown restoration</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Single-visit RCT in most cases</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Rotary NiTi file systems</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Digital apex locators</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Post &amp; core + crown restoration</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
         <!-- Smile Design -->
-        <div class="card border border-teal-200 bg-teal-50/30 p-8 animate-on-scroll delay-100">
+        <div class="rounded-2xl shadow-sm border border-teal-100 bg-teal-50/30 p-8 fade-in delay-1">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0 bg-teal-500 text-white">
+            <div class="w-14 h-14 rounded-2xl bg-teal-500 text-white flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Smile Design</h3>
-              <span class="badge-gold text-xs">★ Signature Service</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Smile Design</h3>
+              <span class="inline-flex items-center text-xs font-semibold rounded-full px-3 py-1" style="color:#92660A; background:rgba(212,168,83,0.12); border:1px solid rgba(212,168,83,0.3)">★ Signature Service</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Our flagship service. Using DSD (Digital Smile Design) software, Dr. Anjali creates a digital preview of your new smile before a single procedure begins. The result is a completely personalised transformation.</p>
+          <p class="text-base text-gray-600 mb-5">Our flagship service. Using DSD (Digital Smile Design) software, Dr. Anjali creates a digital preview of your new smile before a single procedure begins. The result is a completely personalised transformation.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Digital mock-up &amp; smile simulation</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Facial proportion analysis</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Combination of multiple treatments</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Before &amp; after guarantee</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Digital mock-up &amp; smile simulation</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Facial proportion analysis</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Combination of multiple treatments</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Before &amp; after guarantee</li>
           </ul>
-          <a href="contact.html" class="btn-primary btn-sm">Book Design Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-teal-600 transition-colors duration-200">Book Design Consultation</a>
         </div>
 
         <!-- Paediatric Dentistry -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Paediatric Dentistry</h3>
-              <span class="badge-teal text-xs">Children Welcome</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Paediatric Dentistry</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Children Welcome</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Dr. Priya Nair specialises in making dental care fun and anxiety-free for children. We use a tell-show-do approach, kid-friendly flavours and a warm, colourful treatment room designed just for young patients.</p>
+          <p class="text-base text-gray-600 mb-5">Dr. Priya Nair specialises in making dental care fun and anxiety-free for children. We use a tell-show-do approach, kid-friendly flavours and a warm, colourful treatment room designed just for young patients.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> First dental visit for toddlers</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Fluoride treatments &amp; sealants</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Space maintainers</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Orthodontic assessment from age 7</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> First dental visit for toddlers</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Fluoride treatments &amp; sealants</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Space maintainers</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Orthodontic assessment from age 7</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
         <!-- Periodontal -->
-        <div class="card border border-cream-200 p-8 animate-on-scroll delay-100">
+        <div class="bg-white rounded-2xl shadow-sm border border-cream-200 p-8 fade-in delay-1">
           <div class="flex items-start gap-5 mb-6">
-            <div class="icon-wrap-lg flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
             </div>
             <div>
-              <h3 class="text-heading-card mb-2">Gum &amp; Periodontal Care</h3>
-              <span class="badge-navy text-xs">Specialised</span>
+              <h3 class="font-serif text-xl text-navy-500 font-semibold mb-2">Gum &amp; Periodontal Care</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-navy-500 bg-navy-50 border border-navy-100 rounded-full px-3 py-1">Specialised</span>
             </div>
           </div>
-          <p class="text-body-base mb-5">Healthy gums are the foundation of a healthy smile. We treat gum disease at every stage — from gingivitis to advanced periodontitis — and provide ongoing maintenance to keep your gums strong.</p>
+          <p class="text-base text-gray-600 mb-5">Healthy gums are the foundation of a healthy smile. We treat gum disease at every stage — from gingivitis to advanced periodontitis — and provide ongoing maintenance to keep your gums strong.</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Deep scaling &amp; root planing</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Laser gum treatment</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Gum grafting &amp; recession treatment</li>
-            <li class="flex items-center gap-2 text-body-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Periodontal maintenance program</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Deep scaling &amp; root planing</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Laser gum treatment</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Gum grafting &amp; recession treatment</li>
+            <li class="flex items-center gap-2 text-sm text-navy-500"><svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Periodontal maintenance program</li>
           </ul>
-          <a href="contact.html" class="btn-outline btn-sm">Book Consultation</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-navy-500 text-navy-500 font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-navy-50 transition-colors duration-200">Book Consultation</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ PROCESS ══════════════════ -->
-  <section class="section bg-cream-100">
-    <div class="container-site">
-      <div class="section-header animate-on-scroll">
-        <span class="label">How It Works</span>
-        <h2 class="title">Your Journey to a Better Smile</h2>
-        <p class="subtitle">A clear, simple process from your first enquiry to your last follow-up.</p>
+  <!-- PROCESS -->
+  <section class="py-20 bg-cream-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-teal-500 mb-4">How It Works</span>
+        <h2 class="font-serif text-4xl md:text-5xl text-navy-500 mb-4">Your Journey to a Better Smile</h2>
+        <p class="text-gray-500 text-lg">A clear, simple process from your first enquiry to your last follow-up.</p>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-        <div class="card-soft p-8 text-center animate-on-scroll">
-          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5 shadow-teal-sm">1</div>
-          <h3 class="text-heading-md text-navy-500 mb-3 font-serif">Book a Consultation</h3>
-          <p class="text-body-base text-sm">Call, WhatsApp or use our online form. We'll confirm your slot within 2 hours.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl border border-cream-200 p-8 text-center fade-in">
+          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5">1</div>
+          <h3 class="font-serif text-lg text-navy-500 mb-3">Book a Consultation</h3>
+          <p class="text-base text-gray-600 text-sm">Call, WhatsApp or use our online form. We'll confirm your slot within 2 hours.</p>
         </div>
-        <div class="card-soft p-8 text-center animate-on-scroll delay-100">
-          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5 shadow-teal-sm">2</div>
-          <h3 class="text-heading-md text-navy-500 mb-3 font-serif">Thorough Examination</h3>
-          <p class="text-body-base text-sm">Digital X-rays, photos and a detailed clinical exam. We take time to listen and understand your goals.</p>
+        <div class="bg-white rounded-2xl border border-cream-200 p-8 text-center fade-in delay-1">
+          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5">2</div>
+          <h3 class="font-serif text-lg text-navy-500 mb-3">Thorough Examination</h3>
+          <p class="text-base text-gray-600 text-sm">Digital X-rays, photos and a detailed clinical exam. We take time to listen and understand your goals.</p>
         </div>
-        <div class="card-soft p-8 text-center animate-on-scroll delay-200">
-          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5 shadow-teal-sm">3</div>
-          <h3 class="text-heading-md text-navy-500 mb-3 font-serif">Treatment Plan</h3>
-          <p class="text-body-base text-sm">A clear, written plan with all options, timelines and costs. No pressure, no surprises.</p>
+        <div class="bg-white rounded-2xl border border-cream-200 p-8 text-center fade-in delay-2">
+          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5">3</div>
+          <h3 class="font-serif text-lg text-navy-500 mb-3">Treatment Plan</h3>
+          <p class="text-base text-gray-600 text-sm">A clear, written plan with all options, timelines and costs. No pressure, no surprises.</p>
         </div>
-        <div class="card-soft p-8 text-center animate-on-scroll delay-300">
-          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5 shadow-teal-sm">4</div>
-          <h3 class="text-heading-md text-navy-500 mb-3 font-serif">Treatment &amp; Care</h3>
-          <p class="text-body-base text-sm">Comfortable, expert treatment followed by detailed aftercare instructions and a follow-up call.</p>
+        <div class="bg-white rounded-2xl border border-cream-200 p-8 text-center fade-in delay-3">
+          <div class="w-14 h-14 rounded-full bg-teal-500 text-white font-serif text-2xl flex items-center justify-center mx-auto mb-5">4</div>
+          <h3 class="font-serif text-lg text-navy-500 mb-3">Treatment &amp; Care</h3>
+          <p class="text-base text-gray-600 text-sm">Comfortable, expert treatment followed by detailed aftercare instructions and a follow-up call.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ CTA ══════════════════ -->
-  <section class="section-sm bg-gradient-brand text-white">
-    <div class="container-site text-center">
-      <h2 class="font-serif text-display-sm text-white mb-4">Not Sure Where to Start?</h2>
-      <p class="text-teal-100 text-body-xl mb-8 max-w-lg mx-auto">Book a free 20-minute consultation. Our doctors will guide you to the right treatment — no pressure.</p>
-      <a href="contact.html" class="bg-white text-teal-600 hover:bg-cream-100 font-semibold rounded-full px-9 py-4 inline-flex items-center gap-2 transition-colors text-body-xl">
+  <!-- CTA -->
+  <section class="py-14 text-white" style="background: linear-gradient(135deg, #0F9B8E 0%, #0B796E 100%)">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">Not Sure Where to Start?</h2>
+      <p class="text-teal-100 text-lg mb-8 max-w-lg mx-auto">Book a free 20-minute consultation. Our doctors will guide you to the right treatment — no pressure.</p>
+      <a href="contact.html" class="bg-white text-teal-600 hover:bg-cream-100 font-semibold rounded-full px-9 py-4 inline-flex items-center gap-2 transition-colors text-lg">
         Book Free Consultation
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
@@ -345,45 +331,65 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gradient-navy text-white">
-    <div class="container-site pt-16 pb-8">
+  <footer class="text-white" style="background: linear-gradient(135deg, #1A2B4A 0%, #122036 100%)">
+    <div class="max-w-6xl mx-auto px-6 pt-16 pb-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="lg:col-span-2">
           <a href="index.html" class="flex items-center gap-3 mb-5">
             <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center"><svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2c-1.7 0-3.1.9-4 2.2C5.1 2.9 3.7 2 2 2 2 2 1 6.6 3 9.2c.9 1.2 1.6 2.8 2 4.6L5.8 18H7l.3-2.8c.3-1.5 1.2-2.7 2.7-2.7s2.4 1.2 2.7 2.7L13 18h1.2l.8-4.2c.4-1.8 1.1-3.4 2-4.6C19 6.6 18 2 18 2c-1.7 0-3.1.9-4 2.2C13.1 2.9 11.7 2 10 2z"/></svg></div>
             <div class="leading-tight"><span class="block font-serif text-white text-[17px]">Bandra Smile</span><span class="block font-serif text-teal-400 text-[17px]">Studio</span></div>
           </a>
-          <p class="text-body-sm leading-relaxed mb-6 max-w-sm" style="color:#8A9AB8">Premium dental care in the heart of Bandra West. Where exceptional dentistry meets a warm, welcoming environment.</p>
+          <p class="text-sm leading-relaxed mb-6 max-w-sm" style="color:#8A9AB8">Premium dental care in the heart of Bandra West. Where exceptional dentistry meets a warm, welcoming environment.</p>
         </div>
         <div>
-          <h4 class="font-semibold text-white text-body-md mb-5">Services</h4>
+          <h4 class="font-semibold text-white text-sm font-medium mb-5">Services</h4>
           <ul class="space-y-3">
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">General Dentistry</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Cosmetic Dentistry</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Orthodontics</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Dental Implants</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Smile Design</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">General Dentistry</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Cosmetic Dentistry</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Orthodontics</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Dental Implants</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Smile Design</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-white text-body-md mb-5">Visit Us</h4>
+          <h4 class="font-semibold text-white text-sm font-medium mb-5">Visit Us</h4>
           <ul class="space-y-4">
-            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="text-body-sm leading-relaxed" style="color:#8A9AB8">14/A Pali Hill, Bandra West,<br>Mumbai 400050</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+919876543210" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">+91 98765 43210</a></li>
-            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-body-sm leading-relaxed" style="color:#8A9AB8">Mon–Sat: 9am – 8pm<br>Sun: 10am – 4pm</span></li>
+            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="text-sm leading-relaxed" style="color:#8A9AB8">14/A Pali Hill, Bandra West,<br>Mumbai 400050</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+919876543210" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">+91 98765 43210</a></li>
+            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm leading-relaxed" style="color:#8A9AB8">Mon–Sat: 9am – 8pm<br>Sun: 10am – 4pm</span></li>
           </ul>
         </div>
       </div>
       <div class="border-t pt-8" style="border-color:rgba(255,255,255,0.08)">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-body-sm" style="color:#506896">© 2026 Bandra Smile Studio. All rights reserved.</p>
-          <div class="flex items-center gap-6"><a href="#" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#506896">Privacy Policy</a><a href="#" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#506896">Terms</a></div>
+          <p class="text-sm" style="color:#506896">© 2026 Bandra Smile Studio. All rights reserved.</p>
+          <div class="flex items-center gap-6"><a href="#" class="text-sm hover:text-teal-400 transition-colors" style="color:#506896">Privacy Policy</a><a href="#" class="text-sm hover:text-teal-400 transition-colors" style="color:#506896">Terms</a></div>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.style.background = window.scrollY > 20 ? 'rgba(255,255,255,0.97)' : '';
+    navbar.style.boxShadow = window.scrollY > 20 ? '0 1px 12px rgba(0,0,0,0.08)' : '';
+  });
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden', !isOpen);
+    closeIcon.classList.toggle('hidden', isOpen);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
   <!-- WhatsApp floating button -->
   <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment"

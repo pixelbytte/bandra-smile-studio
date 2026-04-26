@@ -15,32 +15,10 @@
     theme: {
       extend: {
         colors: {
-          teal: {
-            DEFAULT: '#0F9B8E',
-            50: '#E6F7F6',
-            100: '#CCF0ED',
-            500: '#0F9B8E',
-            600: '#0D8A7E',
-            700: '#0B796E',
-          },
-          navy: {
-            DEFAULT: '#1A2B4A',
-            50: '#E8EBF0',
-            100: '#D1D7E1',
-            500: '#1A2B4A',
-            600: '#162640',
-            700: '#122036',
-          },
-          cream: {
-            DEFAULT: '#FAF8F3',
-            50: '#FFFFFF',
-            100: '#FAF8F3',
-            200: '#F5F1E8',
-          },
-          gold: {
-            DEFAULT: '#D4A853',
-            400: '#D4A853',
-          }
+          teal: { DEFAULT: '#0F9B8E', 50: '#E6F7F6', 100: '#CCF0ED', 500: '#0F9B8E', 600: '#0D8A7E', 700: '#0B796E' },
+          navy: { DEFAULT: '#1A2B4A', 50: '#E8EBF0', 100: '#D1D7E1', 500: '#1A2B4A', 600: '#162640', 700: '#122036' },
+          cream: { DEFAULT: '#FAF8F3', 50: '#FFFFFF', 100: '#FAF8F3', 200: '#F5F1E8' },
+          gold: { DEFAULT: '#D4A853', 400: '#D4A853' }
         },
         fontFamily: {
           serif: ['"DM Serif Display"', 'Georgia', 'serif'],
@@ -50,15 +28,23 @@
     }
   }
   </script>
+  <style>
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .fade-in.delay-1 { transition-delay: 0.1s; }
+  .fade-in.delay-2 { transition-delay: 0.2s; }
+  .fade-in.delay-3 { transition-delay: 0.3s; }
+  </style>
 </head>
 <body class="bg-cream-100 font-sans antialiased">
 
-  <!-- ══════════════════ NAV ══════════════════ -->
+  <!-- NAV -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300">
-    <div class="container-site">
+    <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
-          <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center shadow-teal-sm group-hover:bg-teal-600 transition-colors duration-200">
+          <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center group-hover:bg-teal-600 transition-colors duration-200">
             <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2c-1.7 0-3.1.9-4 2.2C5.1 2.9 3.7 2 2 2 2 2 1 6.6 3 9.2c.9 1.2 1.6 2.8 2 4.6L5.8 18H7l.3-2.8c.3-1.5 1.2-2.7 2.7-2.7s2.4 1.2 2.7 2.7L13 18h1.2l.8-4.2c.4-1.8 1.1-3.4 2-4.6C19 6.6 18 2 18 2c-1.7 0-3.1.9-4 2.2C13.1 2.9 11.7 2 10 2z"/></svg>
           </div>
           <div class="leading-tight">
@@ -67,19 +53,19 @@
           </div>
         </a>
         <div class="hidden lg:flex items-center gap-7">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="services.html" class="nav-link">Services</a>
-          <a href="doctors.html" class="nav-link active text-teal-500">Doctors</a>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="index.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">About</a>
+          <a href="services.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Services</a>
+          <a href="doctors.html" class="text-sm font-medium text-teal-500">Doctors</a>
+          <a href="gallery.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Gallery</a>
+          <a href="contact.html" class="text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">Contact</a>
         </div>
         <div class="hidden lg:flex items-center gap-5">
-          <a href="tel:+919876543210" class="flex items-center gap-2 text-body-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">
+          <a href="tel:+919876543210" class="flex items-center gap-2 text-sm font-medium text-navy-500 hover:text-teal-500 transition-colors">
             <svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             +91 98765 43210
           </a>
-          <a href="contact.html" class="btn-primary btn-sm">Book Appointment</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-5 py-2.5 text-sm hover:bg-teal-600 transition-colors duration-200">Book Appointment</a>
         </div>
         <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-navy-500 hover:bg-cream-200 transition-colors" aria-label="Open menu">
           <svg id="menu-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -88,193 +74,193 @@
       </div>
     </div>
     <div id="mobile-menu" class="hidden lg:hidden">
-      <div class="container-site pt-3 pb-4">
-        <div class="bg-white rounded-2xl shadow-card-xl border border-cream-200 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 pt-3 pb-4">
+        <div class="bg-white rounded-2xl shadow-xl border border-cream-200 overflow-hidden">
           <div class="p-5 space-y-1">
-            <a href="index.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Home</a>
-            <a href="about.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">About</a>
-            <a href="services.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Services</a>
-            <a href="doctors.html" class="flex py-3 px-4 rounded-xl text-body-md font-semibold text-teal-500 bg-teal-50">Doctors</a>
-            <a href="gallery.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Gallery</a>
-            <a href="contact.html" class="flex py-3 px-4 rounded-xl text-body-md font-medium text-navy-500 hover:bg-cream-100 transition-colors">Contact</a>
+            <a href="index.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Home</a>
+            <a href="about.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">About</a>
+            <a href="services.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Services</a>
+            <a href="doctors.html" class="flex py-3 px-4 rounded-xl text-sm font-semibold text-teal-500 bg-teal-50">Doctors</a>
+            <a href="gallery.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Gallery</a>
+            <a href="contact.html" class="flex py-3 px-4 rounded-xl text-sm font-medium text-navy-500 hover:bg-cream-100 transition-colors">Contact</a>
           </div>
           <div class="px-5 pb-5 pt-1 border-t border-cream-200">
-            <a href="contact.html" class="btn-primary block text-center w-full">Book Appointment</a>
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-6 py-3 hover:bg-teal-600 transition-colors duration-200 block text-center w-full">Book Appointment</a>
           </div>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- ══════════════════ PAGE HERO ══════════════════ -->
+  <!-- PAGE HERO -->
   <section class="pt-32 pb-16 bg-gradient-to-b from-cream-100 to-white">
-    <div class="container-site">
-      <nav class="flex items-center gap-2 text-body-sm mb-6" style="color:#8899B0" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color:#8899B0" aria-label="Breadcrumb">
         <a href="index.html" class="hover:text-teal-500 transition-colors">Home</a>
         <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <span class="text-navy-500 font-medium">Our Doctors</span>
       </nav>
-      <div class="max-w-content-md">
-        <span class="text-subheading mb-4 block">The Team</span>
-        <h1 class="text-display mb-6 text-balance">Specialists Who<br><em class="text-teal-500">Truly Care</em></h1>
-        <p class="text-body-base text-xl max-w-content-sm leading-relaxed">Each doctor on our team brings MDS-level expertise, years of specialist practice and — most importantly — a genuine passion for helping people feel confident about their smiles.</p>
+      <div class="max-w-2xl">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-teal-500 mb-4 block">The Team</span>
+        <h1 class="font-serif text-5xl md:text-6xl text-navy-500 mb-6 text-balance">Specialists Who<br><em class="text-teal-500">Truly Care</em></h1>
+        <p class="text-base text-gray-600 text-xl max-w-xl leading-relaxed">Each doctor on our team brings MDS-level expertise, years of specialist practice and — most importantly — a genuine passion for helping people feel confident about their smiles.</p>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ DOCTOR PROFILES ══════════════════ -->
-  <section class="section bg-white">
-    <div class="container-site space-y-16">
+  <!-- DOCTOR PROFILES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 space-y-16">
 
       <!-- Dr. Anjali Mehta -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+      <div class="grid lg:grid-cols-2 gap-12 items-center fade-in">
         <div class="relative">
-          <div class="rounded-3xl overflow-hidden shadow-card-xl">
+          <div class="rounded-3xl overflow-hidden shadow-xl">
             <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400&h=400&fit=crop&crop=face"
                  alt="Dr. Anjali Mehta" class="w-full h-[500px] object-cover object-center">
           </div>
-          <div class="absolute bottom-6 left-6 bg-white rounded-2xl shadow-card-lg px-5 py-4 border border-cream-200">
-            <div class="flex gap-0.5 text-gold-400 text-base mb-1">★★★★★</div>
-            <div class="text-body-sm font-medium text-navy-500">15 Years Experience</div>
+          <div class="absolute bottom-6 left-6 bg-white rounded-2xl shadow-lg px-5 py-4 border border-cream-200">
+            <div class="flex gap-0.5 text-base mb-1" style="color:#D4A853">★★★★★</div>
+            <div class="text-sm font-medium text-navy-500">15 Years Experience</div>
           </div>
         </div>
         <div>
-          <span class="badge-teal mb-4 inline-flex">Lead Dentist &amp; Smile Design Specialist</span>
-          <h2 class="text-heading-section mb-2">Dr. Anjali Mehta</h2>
-          <p class="text-teal-500 font-medium text-body-md mb-6">BDS (Manipal), MDS — Conservative Dentistry &amp; Endodontics<br>PG Certificate, Aesthetic Dentistry — King's College London</p>
-          <div class="space-y-4 text-body-base mb-8">
+          <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1 mb-4">Lead Dentist &amp; Smile Design Specialist</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-navy-500 mb-2">Dr. Anjali Mehta</h2>
+          <p class="text-teal-500 font-medium text-sm mb-6">BDS (Manipal), MDS — Conservative Dentistry &amp; Endodontics<br>PG Certificate, Aesthetic Dentistry — King's College London</p>
+          <div class="space-y-4 text-base text-gray-600 mb-8">
             <p>Dr. Anjali founded Bandra Smile Studio in 2015 after completing advanced training in aesthetic dentistry in London. She combines technical precision with an artist's eye — designing smiles that look natural, proportional and unmistakably beautiful.</p>
             <p>Her approach to dentistry is profoundly patient-centric. She spends the first consultation simply listening — understanding your anxieties, your lifestyle, your aesthetic goals — before recommending any treatment whatsoever.</p>
           </div>
           <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="card-soft p-4">
+            <div class="bg-white rounded-2xl border border-cream-200 p-4">
               <div class="text-xl font-serif text-teal-500 mb-1">800+</div>
-              <div class="text-body-sm text-navy-500">Smile makeovers</div>
+              <div class="text-sm text-navy-500">Smile makeovers</div>
             </div>
-            <div class="card-soft p-4">
+            <div class="bg-white rounded-2xl border border-cream-200 p-4">
               <div class="text-xl font-serif text-teal-500 mb-1">DSD</div>
-              <div class="text-body-sm text-navy-500">Digital Smile Design certified</div>
+              <div class="text-sm text-navy-500">Digital Smile Design certified</div>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 mb-8">
-            <span class="badge-teal">Smile Design</span>
-            <span class="badge-teal">Veneers</span>
-            <span class="badge-teal">Whitening</span>
-            <span class="badge-teal">Root Canal</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Smile Design</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Veneers</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Whitening</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Root Canal</span>
           </div>
-          <a href="contact.html" class="btn-primary">Book with Dr. Anjali</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-6 py-3 hover:bg-teal-600 transition-colors duration-200">Book with Dr. Anjali</a>
         </div>
       </div>
 
       <div class="border-t border-cream-200"></div>
 
       <!-- Dr. Rohit Shah -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+      <div class="grid lg:grid-cols-2 gap-12 items-center fade-in">
         <div class="lg:order-2 relative">
-          <div class="rounded-3xl overflow-hidden shadow-card-xl">
+          <div class="rounded-3xl overflow-hidden shadow-xl">
             <img loading="lazy" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&h=700&q=80"
                  alt="Dr. Rohit Shah" class="w-full h-[500px] object-cover object-top">
           </div>
-          <div class="absolute bottom-6 right-6 bg-white rounded-2xl shadow-card-lg px-5 py-4 border border-cream-200">
-            <div class="text-body-sm font-medium text-navy-500">Invisalign Platinum Provider</div>
-            <div class="text-body-sm" style="color:#8899B0">Top 5% in India</div>
+          <div class="absolute bottom-6 right-6 bg-white rounded-2xl shadow-lg px-5 py-4 border border-cream-200">
+            <div class="text-sm font-medium text-navy-500">Invisalign Platinum Provider</div>
+            <div class="text-sm" style="color:#8899B0">Top 5% in India</div>
           </div>
         </div>
         <div class="lg:order-1">
-          <span class="badge-teal mb-4 inline-flex">Orthodontist &amp; Implant Specialist</span>
-          <h2 class="text-heading-section mb-2">Dr. Rohit Shah</h2>
-          <p class="text-teal-500 font-medium text-body-md mb-6">BDS (KEM), MDS — Orthodontics &amp; Dentofacial Orthopaedics<br>Invisalign Platinum Provider · Nobel Biocare Implant Certified</p>
-          <div class="space-y-4 text-body-base mb-8">
+          <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1 mb-4">Orthodontist &amp; Implant Specialist</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-navy-500 mb-2">Dr. Rohit Shah</h2>
+          <p class="text-teal-500 font-medium text-sm mb-6">BDS (KEM), MDS — Orthodontics &amp; Dentofacial Orthopaedics<br>Invisalign Platinum Provider · Nobel Biocare Implant Certified</p>
+          <div class="space-y-4 text-base text-gray-600 mb-8">
             <p>Dr. Rohit joined the practice in 2017, bringing with him a reputation as one of Mumbai's most sought-after orthodontists. His case load includes complex bite corrections, full-arch dental implant rehabilitation and teenage orthodontics.</p>
             <p>As a Platinum-tier Invisalign provider, Dr. Rohit has treated over 500 Invisalign cases — from simple alignment to complex open-bite and jaw discrepancy corrections. He is meticulous, communicative and deeply committed to delivering results that last.</p>
           </div>
           <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="card-soft p-4">
+            <div class="bg-white rounded-2xl border border-cream-200 p-4">
               <div class="text-xl font-serif text-teal-500 mb-1">500+</div>
-              <div class="text-body-sm text-navy-500">Invisalign cases</div>
+              <div class="text-sm text-navy-500">Invisalign cases</div>
             </div>
-            <div class="card-soft p-4">
+            <div class="bg-white rounded-2xl border border-cream-200 p-4">
               <div class="text-xl font-serif text-teal-500 mb-1">All-on-4</div>
-              <div class="text-body-sm text-navy-500">Full-arch implant expert</div>
+              <div class="text-sm text-navy-500">Full-arch implant expert</div>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 mb-8">
-            <span class="badge-teal">Invisalign</span>
-            <span class="badge-teal">Braces</span>
-            <span class="badge-teal">Implants</span>
-            <span class="badge-teal">All-on-4</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Invisalign</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Braces</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Implants</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">All-on-4</span>
           </div>
-          <a href="contact.html" class="btn-primary">Book with Dr. Rohit</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-6 py-3 hover:bg-teal-600 transition-colors duration-200">Book with Dr. Rohit</a>
         </div>
       </div>
 
       <div class="border-t border-cream-200"></div>
 
       <!-- Dr. Priya Nair -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+      <div class="grid lg:grid-cols-2 gap-12 items-center fade-in">
         <div class="relative">
-          <div class="rounded-3xl overflow-hidden shadow-card-xl">
+          <div class="rounded-3xl overflow-hidden shadow-xl">
             <img loading="lazy" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
                  alt="Dr. Priya Nair" class="w-full h-[500px] object-cover object-center">
           </div>
-          <div class="absolute bottom-6 left-6 bg-white rounded-2xl shadow-card-lg px-5 py-4 border border-cream-200">
-            <div class="text-body-sm font-medium text-navy-500">Paediatric Specialist</div>
-            <div class="text-body-sm" style="color:#8899B0">Kids love Dr. Priya</div>
+          <div class="absolute bottom-6 left-6 bg-white rounded-2xl shadow-lg px-5 py-4 border border-cream-200">
+            <div class="text-sm font-medium text-navy-500">Paediatric Specialist</div>
+            <div class="text-sm" style="color:#8899B0">Kids love Dr. Priya</div>
           </div>
         </div>
         <div>
-          <span class="badge-teal mb-4 inline-flex">Paediatric Dentist &amp; Preventive Care</span>
-          <h2 class="text-heading-section mb-2">Dr. Priya Nair</h2>
-          <p class="text-teal-500 font-medium text-body-md mb-6">BDS (Government Dental College, Mumbai), MDS — Pedodontics &amp; Preventive Dentistry<br>Advanced Certificate in Child Behaviour Management</p>
-          <div class="space-y-4 text-body-base mb-8">
+          <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1 mb-4">Paediatric Dentist &amp; Preventive Care</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-navy-500 mb-2">Dr. Priya Nair</h2>
+          <p class="text-teal-500 font-medium text-sm mb-6">BDS (Government Dental College, Mumbai), MDS — Pedodontics &amp; Preventive Dentistry<br>Advanced Certificate in Child Behaviour Management</p>
+          <div class="space-y-4 text-base text-gray-600 mb-8">
             <p>Dr. Priya joined Bandra Smile Studio in 2019 with a speciality built around making children feel safe and genuinely happy at the dentist. She has a gift for connecting with young patients that parents consistently describe as remarkable.</p>
             <p>Beyond paediatrics, Dr. Priya leads the practice's preventive dentistry programme — working with patients of all ages to establish habits and treatments that minimise future dental problems. She is also our go-to specialist for dental anxiety management.</p>
           </div>
           <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="card-soft p-4">
+            <div class="bg-white rounded-2xl border border-cream-200 p-4">
               <div class="text-xl font-serif text-teal-500 mb-1">1,200+</div>
-              <div class="text-body-sm text-navy-500">Young patients treated</div>
+              <div class="text-sm text-navy-500">Young patients treated</div>
             </div>
-            <div class="card-soft p-4">
+            <div class="bg-white rounded-2xl border border-cream-200 p-4">
               <div class="text-xl font-serif text-teal-500 mb-1">Tell-Show</div>
-              <div class="text-body-sm text-navy-500">Anxiety-free technique</div>
+              <div class="text-sm text-navy-500">Anxiety-free technique</div>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 mb-8">
-            <span class="badge-teal">Paediatrics</span>
-            <span class="badge-teal">Preventive Care</span>
-            <span class="badge-teal">Sealants</span>
-            <span class="badge-teal">Anxiety Mgmt</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Paediatrics</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Preventive Care</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Sealants</span>
+            <span class="inline-flex items-center text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 rounded-full px-3 py-1">Anxiety Mgmt</span>
           </div>
-          <a href="contact.html" class="btn-primary">Book with Dr. Priya</a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold rounded-full px-6 py-3 hover:bg-teal-600 transition-colors duration-200">Book with Dr. Priya</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ══════════════════ PHILOSOPHY ══════════════════ -->
-  <section class="section bg-cream-100">
-    <div class="container-site">
-      <div class="max-w-content-lg mx-auto text-center animate-on-scroll">
-        <span class="text-subheading mb-4 block">Our Shared Philosophy</span>
-        <h2 class="text-heading-section mb-6">Three Doctors. One Standard.</h2>
-        <p class="text-body-base text-xl mb-12 max-w-content-md mx-auto">Despite different specialities, every doctor at Bandra Smile Studio shares the same commitment — to listen before advising, to explain before treating, and to put your comfort before convenience.</p>
+  <!-- PHILOSOPHY -->
+  <section class="py-20 bg-cream-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center fade-in">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-teal-500 mb-4 block">Our Shared Philosophy</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-navy-500 mb-6">Three Doctors. One Standard.</h2>
+        <p class="text-base text-gray-600 text-xl mb-12 max-w-2xl mx-auto">Despite different specialities, every doctor at Bandra Smile Studio shares the same commitment — to listen before advising, to explain before treating, and to put your comfort before convenience.</p>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="card-soft p-8">
+          <div class="bg-white rounded-2xl border border-cream-200 p-8">
             <div class="text-4xl mb-4">🎯</div>
-            <h3 class="text-heading-md text-navy-500 font-serif mb-3">Precision</h3>
-            <p class="text-body-base text-sm">We use digital planning and the latest technology to ensure every procedure is executed with the highest accuracy.</p>
+            <h3 class="font-serif text-lg text-navy-500 mb-3">Precision</h3>
+            <p class="text-base text-gray-600 text-sm">We use digital planning and the latest technology to ensure every procedure is executed with the highest accuracy.</p>
           </div>
-          <div class="card-soft p-8">
+          <div class="bg-white rounded-2xl border border-cream-200 p-8">
             <div class="text-4xl mb-4">🤝</div>
-            <h3 class="text-heading-md text-navy-500 font-serif mb-3">Trust</h3>
-            <p class="text-body-base text-sm">We earn trust through honesty — honest assessments, honest pricing and honest communication at every step.</p>
+            <h3 class="font-serif text-lg text-navy-500 mb-3">Trust</h3>
+            <p class="text-base text-gray-600 text-sm">We earn trust through honesty — honest assessments, honest pricing and honest communication at every step.</p>
           </div>
-          <div class="card-soft p-8">
+          <div class="bg-white rounded-2xl border border-cream-200 p-8">
             <div class="text-4xl mb-4">💫</div>
-            <h3 class="text-heading-md text-navy-500 font-serif mb-3">Growth</h3>
-            <p class="text-body-base text-sm">Our doctors attend international conferences every year and hold certifications in the latest techniques across all specialities.</p>
+            <h3 class="font-serif text-lg text-navy-500 mb-3">Growth</h3>
+            <p class="text-base text-gray-600 text-sm">Our doctors attend international conferences every year and hold certifications in the latest techniques across all specialities.</p>
           </div>
         </div>
       </div>
@@ -282,11 +268,11 @@
   </section>
 
   <!-- CTA -->
-  <section class="section-sm bg-gradient-brand text-white">
-    <div class="container-site text-center">
-      <h2 class="font-serif text-display-sm text-white mb-4">Meet Us in Person</h2>
-      <p class="text-teal-100 text-body-xl mb-8 max-w-lg mx-auto">Book a free consultation with the right specialist for your needs — our team will guide you.</p>
-      <a href="contact.html" class="bg-white text-teal-600 hover:bg-cream-100 font-semibold rounded-full px-9 py-4 inline-flex items-center gap-2 transition-colors text-body-xl">
+  <section class="py-14 text-white" style="background: linear-gradient(135deg, #0F9B8E 0%, #0B796E 100%)">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">Meet Us in Person</h2>
+      <p class="text-teal-100 text-lg mb-8 max-w-lg mx-auto">Book a free consultation with the right specialist for your needs — our team will guide you.</p>
+      <a href="contact.html" class="bg-white text-teal-600 hover:bg-cream-100 font-semibold rounded-full px-9 py-4 inline-flex items-center gap-2 transition-colors text-lg">
         Book Free Consultation
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
@@ -294,44 +280,64 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gradient-navy text-white">
-    <div class="container-site pt-16 pb-8">
+  <footer class="text-white" style="background: linear-gradient(135deg, #1A2B4A 0%, #122036 100%)">
+    <div class="max-w-6xl mx-auto px-6 pt-16 pb-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="lg:col-span-2">
           <a href="index.html" class="flex items-center gap-3 mb-5">
             <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center"><svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2c-1.7 0-3.1.9-4 2.2C5.1 2.9 3.7 2 2 2 2 2 1 6.6 3 9.2c.9 1.2 1.6 2.8 2 4.6L5.8 18H7l.3-2.8c.3-1.5 1.2-2.7 2.7-2.7s2.4 1.2 2.7 2.7L13 18h1.2l.8-4.2c.4-1.8 1.1-3.4 2-4.6C19 6.6 18 2 18 2c-1.7 0-3.1.9-4 2.2C13.1 2.9 11.7 2 10 2z"/></svg></div>
             <div class="leading-tight"><span class="block font-serif text-white text-[17px]">Bandra Smile</span><span class="block font-serif text-teal-400 text-[17px]">Studio</span></div>
           </a>
-          <p class="text-body-sm leading-relaxed mb-6 max-w-sm" style="color:#8A9AB8">Premium dental care in the heart of Bandra West. Where exceptional dentistry meets a warm, welcoming environment.</p>
+          <p class="text-sm leading-relaxed mb-6 max-w-sm" style="color:#8A9AB8">Premium dental care in the heart of Bandra West. Where exceptional dentistry meets a warm, welcoming environment.</p>
         </div>
         <div>
-          <h4 class="font-semibold text-white text-body-md mb-5">Services</h4>
+          <h4 class="font-semibold text-white text-sm mb-5">Services</h4>
           <ul class="space-y-3">
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">General Dentistry</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Cosmetic Dentistry</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Orthodontics</a></li>
-            <li><a href="services.html" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Dental Implants</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">General Dentistry</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Cosmetic Dentistry</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Orthodontics</a></li>
+            <li><a href="services.html" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">Dental Implants</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-white text-body-md mb-5">Visit Us</h4>
+          <h4 class="font-semibold text-white text-sm mb-5">Visit Us</h4>
           <ul class="space-y-4">
-            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="text-body-sm leading-relaxed" style="color:#8A9AB8">14/A Pali Hill, Bandra West, Mumbai 400050</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+919876543210" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">+91 98765 43210</a></li>
-            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-body-sm leading-relaxed" style="color:#8A9AB8">Mon–Sat: 9am – 8pm · Sun: 10am – 4pm</span></li>
+            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="text-sm leading-relaxed" style="color:#8A9AB8">14/A Pali Hill, Bandra West, Mumbai 400050</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+919876543210" class="text-sm hover:text-teal-400 transition-colors" style="color:#8A9AB8">+91 98765 43210</a></li>
+            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm leading-relaxed" style="color:#8A9AB8">Mon–Sat: 9am – 8pm · Sun: 10am – 4pm</span></li>
           </ul>
         </div>
       </div>
       <div class="border-t pt-8" style="border-color:rgba(255,255,255,0.08)">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-body-sm" style="color:#506896">© 2026 Bandra Smile Studio. All rights reserved.</p>
-          <div class="flex items-center gap-6"><a href="#" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#506896">Privacy Policy</a><a href="#" class="text-body-sm hover:text-teal-400 transition-colors" style="color:#506896">Terms</a></div>
+          <p class="text-sm" style="color:#506896">© 2026 Bandra Smile Studio. All rights reserved.</p>
+          <div class="flex items-center gap-6"><a href="#" class="text-sm hover:text-teal-400 transition-colors" style="color:#506896">Privacy Policy</a><a href="#" class="text-sm hover:text-teal-400 transition-colors" style="color:#506896">Terms</a></div>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.style.background = window.scrollY > 20 ? 'rgba(255,255,255,0.97)' : '';
+    navbar.style.boxShadow = window.scrollY > 20 ? '0 1px 12px rgba(0,0,0,0.08)' : '';
+  });
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden', !isOpen);
+    closeIcon.classList.toggle('hidden', isOpen);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
   <!-- WhatsApp floating button -->
   <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment"
